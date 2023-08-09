@@ -51,7 +51,13 @@ export default function Home() {
     <div className={style.all}>
       <h1 className={style.title}>成長記録</h1>
       <div>
-        <Carousel responsive={responsive} showDots customDot={<CustomDot />}>
+        <Carousel
+          responsive={responsive}
+          showDots
+          customDot={<CustomDot />}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          infinite={true}>
           <div className={style.card}>
             <div className={style.photos}>
               <img src="img02.jpg"></img>
