@@ -44,4 +44,17 @@
 .comment {
     text-align: left;
     font-size: 12px;
+    margin: 16px 0;
+}
+
+.active {
+    background-color: blue;
+    border: none;
+    font-size: 24px; // ドットのサイズを調整
+}
+
+.inactive {
+    background-color: gray;
+    border: none;
+    font-size: 24px; // ドットのサイズを調整
 }

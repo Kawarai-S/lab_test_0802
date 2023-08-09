@@ -5,6 +5,25 @@ import "react-multi-carousel/lib/styles.css";
 import style from "../styles/test.module.scss"
 import { comment } from 'postcss';
 
+const CustomDot = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    index,
+    active,
+    carouselState: { currentSlide, deviceType }
+  } = rest;
+
+  return (
+    <button
+      className={active ? "style.active" : "style.inactive"}
+      onClick={() => onClick()}
+    >
+      <br></br>
+      <span>•</span> {/* ここでドットの見た目を設定します。 */}
+    </button>
+  );
+};
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -32,7 +51,7 @@ export default function Home() {
     <div className={style.all}>
       <h1 className={style.title}>成長記録</h1>
       <div>
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsive} showDots customDot={<CustomDot />}>
           <div className={style.card}>
             <div className={style.photos}>
               <img src="img02.jpg"></img>
