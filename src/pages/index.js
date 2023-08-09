@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import style from "../styles/test.module.scss"
+import { comment } from 'postcss';
 
 const responsive = {
   superLargeDesktop: {
@@ -28,39 +29,45 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
-      <h1>INTERVIEW</h1>
+    <div className={style.all}>
+      <h1 className={style.title}>成長記録</h1>
       <div>
         <Carousel responsive={responsive}>
           <div className={style.card}>
             <div className={style.photos}>
-              <img src="img01.jpg"></img>
-            </div>
-          </div>
-          <div className={style.card}>
-            <div className={style.photos}>
               <img src="img02.jpg"></img>
+            </div>
+            <div className={style.comment}>
+              <p>うちにくる前のねこ。瞳がこぼれそうで少し不安になる。</p>
             </div>
           </div>
           <div className={style.card}>
             <div className={style.photos}>
               <img src="img03.jpg"></img>
             </div>
+            <div className={style.comment}>
+              <p>うちに来たばかりのねこ。まだ小さくて両の手のひらにおさまるくらいだった。</p>
+            </div>
           </div>
           <div className={style.card}>
             <div className={style.photos}>
-              <img src="img04.png"></img>
+              <img src="img05.jpg"></img>
             </div>
-            <div>
-              <p>ジーズアカデミーで 得た</p>
-              <p>新しいコミュニティが</p>
-              <p>異業種からエンジニア</p>
-              <p>転職のきっかけに。</p>
+            <div className={style.comment}>
+              <p>窓際で日向ぼっこするねこ。翠の瞳が日に透けて美しい。だいぶ大きくなった。</p>
+            </div>
+          </div>
+          <div className={style.card}>
+            <div className={style.photos}>
+              <img src="img06.jpg"></img>
+            </div>
+            <div className={style.comment}>
+              <p>シーツをくしゃくしゃにしてご満悦なねこ。暑くなってからこうして人間のベッドに落ちてることが増えた。</p>
             </div>
           </div>
         </Carousel>
       </div>
-      <button className={style.btn}>記事一覧を見る</button>
+      <button className={style.btn}>成長記録を見る</button>
     </div>
   );
 }
