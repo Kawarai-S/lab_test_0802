@@ -19,7 +19,7 @@ const CustomDot = ({ onClick, ...rest }) => {
       onClick={() => onClick()}
     >
       <br></br>
-      <span>•</span> {/* ここでドットの見た目を設定します。 */}
+      <span>•　</span> {/* ここでドットの見た目を設定します。 */}
     </button>
   );
 };
